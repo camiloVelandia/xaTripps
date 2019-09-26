@@ -19,7 +19,7 @@ class _PlatTripps extends State<PlatTripps>{
   final List<Widget> widgetChildren =[
     HomeTripps(),
     SearchTripps(),
-    ProfileTripps()
+    ProfileTripps("assets/img/Beneto_Fanart_Ermac_B.jpg", "varuna yasas", "varuna@gmail.com")
   ];
   void onTapTapped(int index){
   setState(() {
