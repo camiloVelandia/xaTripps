@@ -1,8 +1,11 @@
 # trips_app
 
-A new Flutter application.
+Esta es una aplicacion desarrollada en flutter y dart.
 
 ## Getting Started
+
+this aplicattion is developed by: Camilo Velandia
+email: velandiacamilo356@gmail.com
 
 This project is a starting point for a Flutter application.
 
