@@ -1,30 +1,26 @@
 import 'package:flutter/material.dart';
-import 'gradient_back.dart';
-import 'options_profile.dart';
-import 'card_image_profile.dart';
-import 'perfil.dart';
 
-class ProfileTripps extends StatelessWidget{
+class Perfil extends StatelessWidget{
 
   String pathImage = "assets/img/Beneto_Fanart_Ermac_B.jpg";
   String name = " varuna yasas";
-  String details = "varuna@gmail.com";
+  String details = "varun@gmail.com";
 
-
-  ProfileTripps(this.pathImage, this.name, this.details);
-
+  Perfil(this.pathImage);
 
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
 
 
     final userInfo = Container(
       margin: EdgeInsets.only(
           left: 20.0
       ),
-      child: Text(
+      child:Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+      Text(
         details,
         textAlign: TextAlign.left,
         style: TextStyle(
@@ -33,35 +29,44 @@ class ProfileTripps extends StatelessWidget{
             color: Color(0xFFa3a5a7)
         ),
       ),
+      Container(
+        margin: EdgeInsets.only(
+          left: 5.0
+        ),
+      )
+        ]
+      )
     );
 
     final userName = Container(
       margin: EdgeInsets.only(
+        top: 20.0,
           left: 20.0
       ),
       child: Text(
         name,
         textAlign: TextAlign.left,
         style: TextStyle(
+            color: Colors.white,
             fontFamily: "Lato",
             fontSize: 17.0
         ),
       ),
     );
 
-    final userDetails = Column(
+    final userDetails= Column(
 
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
 
         userName,
-        userInfo
+        userInfo,
       ],
     );
 
     final photo = Container(
       margin: EdgeInsets.only(
-          top: 20.0,
+
           left: 20.0
       ),
       width: 80.0,
@@ -69,6 +74,7 @@ class ProfileTripps extends StatelessWidget{
 
       decoration: BoxDecoration(
           shape: BoxShape.circle,
+          border: Border.all(color: Colors.white),
           image: DecorationImage(
               fit: BoxFit.cover,
               image: AssetImage(pathImage)
@@ -76,26 +82,23 @@ class ProfileTripps extends StatelessWidget{
       ),
     );
 
+    return Container(
 
-    return Stack(
-
+      margin: EdgeInsets.only(
+        top: 10.0
+      ),
+      //crossAxisAlignment: CrossAxisAlignment.start,
+      alignment: Alignment(-0.9,-0.7),
+      child: Row(
         children: <Widget>[
-
-          GradientBack("Perfil"),
+          photo,
           Container(
-            margin: EdgeInsets.only(
-              top: 60.0,
-              left: 270.0,
-            ),
-            child: Icon(
-              Icons.settings,
-              color: Colors.blueGrey,
-              size: 18.0,
-            ),
-          ),
-          Perfil("assets/img/Beneto_Fanart_Ermac_B.jpg",),
-          OptionProfile(),
-          //CardImageProfile(),
-        ]
+            height: 80.0,
+            child: userDetails,
+          )
+        ],
+      ),
     );
-  }}
+  }
+
+}
