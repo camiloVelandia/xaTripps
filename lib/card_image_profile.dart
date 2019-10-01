@@ -1,21 +1,26 @@
 import 'package:flutter/material.dart';
-import 'card_image.dart';
+import 'card_imege_perfil.dart';
 
 class CardImageProfile extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Container(
-      height: 150.0,
+      margin: EdgeInsets.only(
+        top: 270,
+      ),
       child: ListView(
-        padding: EdgeInsets.all(25.0),
         scrollDirection: Axis.vertical,
         children: <Widget>[
-          CardImage("assets/img/flor.JPG"),
-          CardImage("assets/img/egypt.jpg"),
-          CardImage("assets/img/delh.jpg"),
-          CardImage("assets/img/india.jpg"),
-          CardImage("assets/img/taj.jpg")
+          CardImagePerfil("assets/img/flor.JPG"),
+          Container(margin: EdgeInsets.all(42.0),),
+          CardImagePerfil("assets/img/egypt.jpg"),
+          Container(margin: EdgeInsets.all(42.0),),
+          CardImagePerfil("assets/img/delh.jpg"),
+          Container(margin: EdgeInsets.all(42.0),),
+          CardImagePerfil("assets/img/india.jpg"),
+          Container(margin: EdgeInsets.all(42.0),),
+          CardImagePerfil("assets/img/taj.jpg")
         ],
       ),
     );

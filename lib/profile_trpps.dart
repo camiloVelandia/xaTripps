@@ -95,6 +95,7 @@ class ProfileTripps extends StatelessWidget{
           ),
           Perfil("assets/img/Beneto_Fanart_Ermac_B.jpg",),
           OptionProfile(),
+          CardImageProfile(),
           //CardImageProfile(),
         ]
     );
