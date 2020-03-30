@@ -1,6 +1,6 @@
 # trips_app
 
-Esta es una aplicacion desarrollada en flutter y dart.
+this is my first app developed in flutter and dart.
 
 ## Getting Started
 
